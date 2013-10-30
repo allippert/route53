@@ -39,7 +39,7 @@ elsif node['platform_family'] == 'rhel'
    xslt.run_action( :install )
 end
 
-fog = gem_package "fog" do
+fog = chef_gem "fog" do
   action :nothing
 end
 fog.run_action( :install )
